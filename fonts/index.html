@@ -207,7 +207,7 @@ code {
 	<li>Quotes around family names are optional, but puncuation characters and words that start with a number must be escaped or quoted.</li>
 	<li>Browser displays the first font that is installed or will be downloaded (see @font-face in a bit)</li>
 	<li>Include a generic family name as a fallback in a font-family list in case the specified fonts aren't available</li>
-  <li>If declaration is invalide, it goes to <code>initial</code>, it's not inherited <code>inherit</code>).</li>
+  <li>If declaration is invalid, it goes to <code>initial</code>, it's not inherited <code>inherit</code>).</li>
 <li>If the main rendered font is missing characters, chars will be pulled from the next font-family in the list that has that character.</li>
 <li>When a font is available but not in the style or variant declared, next font may be used</li>
 </ul>
@@ -346,7 +346,7 @@ code {
 	<li>If no italic or oblique font, regular face may be used and sloped</li>
 	<li>use <code>font-synthesis</code> to control sloping behavior</li>
 	 <li>For variable <code>.ttf</code> &amp; <code>.otf</code>, use <code>"slnt"</code> for oblique and <code>"ital" 1</code> for italic as <code>font-variation-settings</code>.</li>
-	 <li>Note: OpenType <code>"slnt"</code> axis is defined with a positive angle meaning a counter-colockwise slant, the opposite direction to CSS.</li></ul>
+	 <li>Note: OpenType <code>"slnt"</code> axis is defined with a positive angle meaning a counter-clockwise slant, the opposite direction to CSS.</li></ul>
 
  
 </section>
@@ -492,7 +492,7 @@ ordinal || slashed-zero || &lt;east-asian-variant-values> ||
    all-petite-caps | unicase | titling-caps</pre>
   <dl>
   <dt>normal</dt>
-  <dd>Deactivates of the use of alternate glyphs.</dd>
+  <dd>Deactivates the use of alternate glyphs.</dd>
   <dt>small-caps</dt>
   <dd>Enables display of small capitals (OpenType feature: <strong>smcp</strong>). Small-caps glyphs typically use the form of uppercase letters but are reduced to the size of lowercase letters.</dd>
   <dt>all-small-caps</dt>
@@ -504,7 +504,7 @@ ordinal || slashed-zero || &lt;east-asian-variant-values> ||
   <dt>unicase</dt>
   <dd>Enables display of mixture of small capitals for uppercase letters with normal lowercase letters (OpenType feature: <strong>unic</strong>).</dd>
   <dt>titling-caps</dt>
-  <dd>Enables display of titling capitals (OpenType feature: <strong>titl</strong>).  Uppercase letter glyphs are often designed for use with lowercase  letters. When used in all uppercase titling sequences they can appear  too strong. Titling capitals are designed specifically for this  situation.</dd>
+  <dd>Enables display of titling capitals (OpenType feature: <strong>titl</strong>).  Uppercase letter glyphs are often designed for use with lowercase letters. When used in all uppercase titling sequences they can appear too strong. Titling capitals are designed specifically for this situation.</dd>
 </dl>
 </section>
 </div>
@@ -534,14 +534,14 @@ oldstyle-nums | tabular-nums | diagonal-fractions | stacked-fractions</pre><dl>
   <dd>These values controls the sizing of figures used for numbers. Two values are possible:
     <ul>
       <li><code class="pre">proportional-nums</code> activating the set of figures where numbers are not all of the same size. OpenType:s <strong>pnum</strong>.</li>
-      <li><code class="pre">tabular-nums</code> activating the set of figures where  numbers are all of the same size, allowing them to be easily aligned  like in tables. OpenType:s <strong>tnum</strong>.</li>
+      <li><code class="pre">tabular-nums</code> activating the set of figures where numbers are all of the same size, allowing them to be easily aligned  like in tables. OpenType:s <strong>tnum</strong>.</li>
     </ul>
   </dd>
   <dt>&lt;numeric-fraction-values&gt;</dt>
   <dd>These values controls the glyphs used to display fractions. Two values are possible:
     <ul>
-      <li><code class="pre">diagonal-fractions</code> activating the set of figures  where the numerator and denominator are made smaller and separated by a  slash. OpenType:s <strong>frac</strong>.</li>
-      <li><code class="pre">stacked-fractions</code> activating the set of figures where  the numerator and denominator are made smaller, stacked and separated  by a horizontal line. OpenType:s <strong>afrc</strong>.</li>
+      <li><code class="pre">diagonal-fractions</code> activating the set of figures where the numerator and denominator are made smaller and separated by a slash. OpenType:s <strong>frac</strong>.</li>
+      <li><code class="pre">stacked-fractions</code> activating the set of figures where the numerator and denominator are made smaller, stacked and separated by a horizontal line. OpenType:s <strong>afrc</strong>.</li>
     </ul>
   </dd>
 </dl>
@@ -575,7 +575,7 @@ oldstyle-nums | tabular-nums | diagonal-fractions | stacked-fractions</pre><dl>
   <pre contenteditable class="multi">normal | none | (no-)contextual | (no-)common-ligatures | 
  (no-)discretionary-ligatures | (no-)historical-ligatures;</pre>
  <dl><dt>normal</dt>
-  <dd>This keyword leads to the activation of the usual ligatures and  contextual forms needed for correct rendering. The ligatures and forms  activated depend on the font, language and kind of script. This is the  default value.</dd>
+  <dd>This keyword leads to the activation of the usual ligatures and  contextual forms needed for correct rendering. The ligatures and forms activated depend on the font, language and kind of script. This is the  default value.</dd>
   <dt>none</dt>
   <dd>This keyword specifies that all ligatures and contextual forms are disabled, even common ones.</dd>
   <dt>&lt;common-lig-values&gt;</dt>
@@ -586,14 +586,14 @@ oldstyle-nums | tabular-nums | diagonal-fractions | stacked-fractions</pre><dl>
     </ul>
   </dd>
   <dt>&lt;discretionary-lig-values&gt;</dt>
-  <dd>These values control specific ligatures, specific to the font and  defined by the type designer. They correspond to the OpenType values <code>"dlig"</code>. Two values are possible:
+  <dd>These values control specific ligatures, specific to the font and defined by the type designer. They correspond to the OpenType values <code>"dlig"</code>. Two values are possible:
     <ul>
       <li><code>discretionary-ligatures</code> activates these ligatures.</li>
       <li><code><b>no-discretionary-ligatures</b></code> Default. Deactivates the ligatures. </li>
     </ul>
   </dd>
   <dt>&lt;historical-lig-values&gt;</dt>
-  <dd>These values control the ligatures used historically, in old books,  like the German <code>tz</code> digraph being displayed <code>ß</code>. They correspond to the  OpenType values <code>"hlig"</code>. Two values are possible:
+  <dd>These values control the ligatures used historically, in old books, like the German <code>tz</code> digraph being displayed <code>ß</code>. They correspond to the  OpenType values <code>"hlig"</code>. Two values are possible:
     <ul>
       <li><code>historical-ligatures</code> Activates these ligatures.</li>
       <li><code><b>no-historical-ligatures</b></code> Default. Deactivates the ligatures.</li>
@@ -642,7 +642,7 @@ traditional | full-width | proportional-width | ruby</pre>
   <dt>normal</dt>
   <dd>This keyword leads to the deactivation of the use of such alternate glyphs.</dd>
   <dt>ruby</dt>
-  <dd>This keyword forces the use of special glyphs for ruby characters.  As these are usually smaller, font creators often designs specific  forms, usually slightly bolder to improve the contrast. This keyword  corresponds to the OpenType values ruby.</dd>
+  <dd>This keyword forces the use of special glyphs for ruby characters. As these are usually smaller, font creators often designs specific forms, usually slightly bolder to improve the contrast. This keyword corresponds to the OpenType values ruby.</dd>
   <dt>&lt;east-asian-variant-values&gt;</dt>
   <dd>These values specify a set of logographic glyph variants which should be used for display. Possible values are:
     <table>
@@ -1123,7 +1123,7 @@ src: local(Acme Font),
   <dt>oblique</dt>
   <dd>Sloped version of the normal font. <code class="pre">font-style: oblique;</code></dd>
   <dt>oblique with angle</dt>
-  <dd>Font is set to oblique with a specifie slange angle <code class="pre">font-style: oblique -10deg;</code></dd>
+  <dd>Font is set to oblique with a specific slant angle <code class="pre">font-style: oblique -10deg;</code></dd>
   <dt>oblique &lt;angle> range </dt>
   <dd>Selects a font classified as oblique while specifying a range of allowable angles of text slant. <code class="pre">font-style: oblique -30deg 30deg;</code> </dd>
 </dl>
@@ -1424,7 +1424,7 @@ I'm sure those windmills will keep them cool. This is the worst part. The calm b
 <header><h1>Font Notes</h1></header>
 <section class="content">
 <ol>
-  <li>Loading: Font files can have huge files sizes. Redue the number of fonts and the charset for each</li>
+  <li>Loading: Font files can have huge files sizes. Reduce the number of fonts and the charset for each</li>
 	<li>Legal ownership: Putting a font on the web makes it available for people to download freely. You need the right type of ownership to do this legally</li>
 	<li>Performance: Due to the size, they can take a long time to load. FOUT and FOIC<ul>
     <li>Flash of Unstyled Text:  display fallback until custom font loads</li>
